@@ -1,20 +1,18 @@
 package Game;
 
-import java.awt.*;
+import java.awt.GraphicsConfiguration;
+import java.awt.HeadlessException;
 import javax.swing.*;
 
-public class Screen extends JPanel {
+public class Screen extends JFrame {
 
-    JLabel fondo;
-    public ImageIcon img;
+    private int width;
+    private int height;
+    private int pixelBlock;
+    private int blockX;
+    private int blockY;
 
     public Screen() {
-        
-    }
-
-    @Override
-    protected void paintComponent(Graphics g) {
-        
         
     }
 
