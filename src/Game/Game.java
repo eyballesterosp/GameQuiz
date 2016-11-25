@@ -1,14 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Game;
 
-/**
- *
- * @author Estudiante
- */
-public class Game {
-    
+import java.awt.HeadlessException;
+import javax.swing.JFrame;
+
+public class Game extends JFrame {
+
+    public Game() {
+        setTitle("THE BEST GAME");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(600, 600);
+        setLocationRelativeTo(null);
+        setResizable(false);
+        add(new Maze());
+        setVisible(true);
+    }
+
+    public static void main(String args[]) {
+        new Game();
+    }
 }
