@@ -1,14 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Game;
 
-/**
- *
- * @author Estudiante
- */
-public class Screen {
-    
+import java.awt.*;
+import javax.swing.*;
+
+public class Screen extends JPanel {
+
+    JLabel fondo;
+    public ImageIcon img;
+
+    public Screen() {
+        
+    }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        
+        
+    }
+
 }

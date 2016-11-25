@@ -1,50 +1,20 @@
 package Game;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Image;
-import static java.lang.Thread.sleep;
-import javax.swing.ImageIcon;
-import javax.swing.JPanel;
+import Game.Character.*;
 
-public class Maze extends JPanel implements Runnable {
+public class Maze extends Game{
 
-    private Thread hilo;
-    private int x, y;
-    ImageIcon fondo = new ImageIcon("fondo.jpg");
+    private int time;
+    private World worlds;
+    private Hero heroes;
+    private Screen configureScreen;
 
-    public Maze() {
-        setBackground(Color.WHITE);
-        setDoubleBuffered(true);
+    public Maze(int time, World worlds, Hero heroes, Screen configureScreen) {
+        this.time = time;
+        this.worlds = worlds;
+        this.heroes = heroes;
+        this.configureScreen = configureScreen;
     }
-
-    @Override
-    public void addNotify() {
-        super.addNotify();
-        //CREAMOS UN NUEVO HILO Y LO INICIAMOS
-        hilo = new Thread(this);
-        hilo.start();
-    }
-
-    @Override
-    public void paint(Graphics g) {
-        super.paint(g);
-        Graphics2D g2 = (Graphics2D) g;
-        g.dispose();
-    }
-
-    public void ciclo() {
-        x += 1;
-        y += 1;
-    }
-
-    @Override
-    public void run() {
-        while (true) {
-            ciclo();
-            repaint();
-
-        }
-    }
+    
+    
 }
